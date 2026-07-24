@@ -3,6 +3,7 @@ plugins {
     id("com.github.ben-manes.versions") version "0.52.0"
     id("application")
     id("org.sonarqube") version "7.3.1.8318"
+    id("checkstyle")
 }
 
 group = "hexlet.code"
@@ -10,6 +11,11 @@ version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
+}
+
+checkstyle {
+    toolVersion = "13.8.0"
+    configFile = file("config/checkstyle/checkstyle.xml")
 }
 
 dependencies {
