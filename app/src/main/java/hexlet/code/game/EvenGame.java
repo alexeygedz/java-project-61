@@ -3,7 +3,6 @@ package hexlet.code.game;
 import java.util.Random;
 import java.util.Scanner;
 
-@SuppressWarnings({"java:S106"})
 public class EvenGame {
 
     private static final Random RANDOM = new Random();
