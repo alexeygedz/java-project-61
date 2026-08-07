@@ -7,7 +7,8 @@ import java.util.Scanner;
 
 public class Cli {
     private static String userName = "";
-    private static final Scanner scanner = new Scanner(System.in);
+    private static final Scanner SCANNER = new Scanner(System.in);
+    private static final int NUMBER_ROUNDS = 3;
 
     private Cli() {
     }
@@ -19,7 +20,7 @@ public class Cli {
         System.out.println("3 - Calc");
         System.out.println("0 - Exit");
 
-        String choice = scanner.nextLine();
+        String choice = SCANNER.nextLine();
 
         System.out.println(String.join(" ", "Your choice:", choice));
 
@@ -29,25 +30,25 @@ public class Cli {
 
         if (choice.equals("2")) {
             greetUser();
-            EvenGame.start(scanner, userName);
+            EvenGame.start(SCANNER, userName, NUMBER_ROUNDS);
         }
 
         if (choice.equals("3")) {
             greetUser();
-            CalcGame.start(scanner, userName);
+            CalcGame.start(SCANNER, userName, NUMBER_ROUNDS);
         }
 
         if (choice.equals("0")) {
             System.out.println("Bye!");
         }
 
-        scanner.close();
+        SCANNER.close();
     }
 
     private static void greetUser() {
         System.out.println("Welcome to the Brain Games!");
         System.out.println("May I have your name?");
-        userName = scanner.nextLine();
+        userName = SCANNER.nextLine();
         System.out.println(String.join(" ", "Hello,", userName, "!"));
     }
 }
