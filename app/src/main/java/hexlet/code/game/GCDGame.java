@@ -12,7 +12,7 @@ public class GCDGame {
 
     public static void start(Scanner scanner, String name, int numberRounds) {
 
-        System.out.println("What is the result of the expression?");
+        System.out.println("Find the greatest common divisor of given numbers.");
 
         for (int round = 1; round < numberRounds; round++) {
             int firstNumber = RANDOM.nextInt(50);
