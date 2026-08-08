@@ -14,7 +14,7 @@ public class EvenGame {
 
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
 
-        for (int round = 1; round < numberRounds; round++) {
+        for (int round = 0; round < numberRounds; round++) {
             int number = RANDOM.nextInt(500);
             String answer;
 
@@ -24,7 +24,7 @@ public class EvenGame {
                 answer = "no";
             }
 
-            System.out.println(String.join(" ", "Round", String.valueOf(round)));
+            System.out.println(String.join(" ", "Round", String.valueOf(round + 1)));
             System.out.println(String.join(" ", "Question:", String.valueOf(number)));
             String userAnswer = scanner.nextLine();
             System.out.println(String.join(" ", "Your answer:", userAnswer));

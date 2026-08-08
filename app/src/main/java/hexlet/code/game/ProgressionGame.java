@@ -13,7 +13,7 @@ public class ProgressionGame {
 
         System.out.println("What number is missing in the progression?");
 
-        for (int round = 1; round < numberRounds; round++) {
+        for (int round = 0; round < numberRounds; round++) {
             int lengthOfProgression = RANDOM.nextInt(5, 11);
             int hiddenElement = RANDOM.nextInt(1, lengthOfProgression + 1);
             int step = 5;
@@ -21,7 +21,7 @@ public class ProgressionGame {
             String stringElements = convertToString(elements, hiddenElement);
             String answer = String.valueOf(elements[hiddenElement]);
 
-            System.out.println(String.join(" ", "Round", String.valueOf(round)));
+            System.out.println(String.join(" ", "Round", String.valueOf(round + 1)));
             System.out.println(String.join(" ", "Question:", stringElements));
             String userAnswer = scanner.nextLine();
             System.out.println(String.join(" ", "Your answer:", userAnswer));

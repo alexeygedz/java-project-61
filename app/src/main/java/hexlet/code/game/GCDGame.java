@@ -14,12 +14,12 @@ public class GCDGame {
 
         System.out.println("Find the greatest common divisor of given numbers.");
 
-        for (int round = 1; round < numberRounds; round++) {
+        for (int round = 0; round < numberRounds; round++) {
             int firstNumber = RANDOM.nextInt(50);
             int secondNumber = RANDOM.nextInt(50);
             String answer = String.valueOf(calculateAnswer(firstNumber, secondNumber));
 
-            System.out.println(String.join(" ", "Round", String.valueOf(round)));
+            System.out.println(String.join(" ", "Round", String.valueOf(round + 1)));
             System.out.println(
                 String.join(" ", "Question:", String.valueOf(firstNumber), String.valueOf(secondNumber)));
             String userAnswer = scanner.nextLine();

@@ -14,14 +14,14 @@ public class CalcGame {
 
         System.out.println("What is the result of the expression?");
 
-        for (int round = 1; round < numberRounds; round++) {
+        for (int round = 0; round < numberRounds; round++) {
             int firstNumber = RANDOM.nextInt(2);
             int secondNumber = RANDOM.nextInt(2);
             String[] operators = {"+", "-", "*"};
             String randomOperator = operators[RANDOM.nextInt(3)];
             String answer = String.valueOf(calculateAnswer(firstNumber, secondNumber, randomOperator));
 
-            System.out.println(String.join(" ", "Round", String.valueOf(round)));
+            System.out.println(String.join(" ", "Round", String.valueOf(round + 1)));
             System.out.println(String.join(" ", "Question:", String.valueOf(firstNumber), randomOperator,
                 String.valueOf(secondNumber)));
             String userAnswer = scanner.nextLine();
