@@ -19,7 +19,7 @@ public class ProgressionGame {
             int step = 5;
             int[] elements = generateElements(lengthOfProgression, step);
             String stringElements = convertToString(elements, hiddenElement);
-            String answer = String.valueOf(step);
+            String answer = String.valueOf(elements[hiddenElement]);
 
             System.out.println(String.join(" ", "Round", String.valueOf(round)));
             System.out.println(String.join(" ", "Question:", stringElements));
